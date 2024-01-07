@@ -1,0 +1,232 @@
+/******* GENERAL *******/
+/* spacing on all sections */
+#about,
+#skills,
+#portfolio,
+#contact {
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+#about h2,
+#skills h2,
+#portfolio h2,
+#contact h2 {
+    margin-bottom: 3rem;
+}
+#contact {
+    padding-bottom: 4rem;
+}
+
+
+body.dark {
+    background-color: #1c1c1c;
+}
+body.light {
+    background-color: #d8d8d8;
+}
+
+.dark .navbarScroll {
+    background-color: #989898;
+}
+
+.light .navbarScroll {
+    background-color: #dcdcdc;
+}
+
+.about {
+    margin-top: 70px;
+}
+
+.about_text {
+    font-family: "Quicksand";
+    color: #088A85;
+    font-size: 18px;
+}
+
+.about_me {
+    display: flex;
+    align-items: center ;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title h1 {
+    font-family: 'Bellarina';
+    font-size: 95px;
+    font-weight: 900;
+    background: linear-gradient(to right, #FA58AC, #088A85);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 1%;
+    width: 50%
+}
+
+#title h1.subtitle {
+    font-size: 70px;
+    background: linear-gradient(to left, #FA58AC, #088A85);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    justify-content: flex-end;    
+}
+
+@font-face {
+    font-family: 'Pacifico' ;
+    src: url('Pacifico.ttf') ;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('Quicksand_Book.otf');
+}
+
+@font-face {
+    font-family: 'Bellarina';
+    src: url('./Polices/Bellarina.otf');
+}
+
+.navbar .container {
+    margin-left: 15px;
+    max-width: 100%;
+}
+
+.light .navbar-nav a.nav-link {
+    color:#1c1c1c;
+}
+/* menu */
+.darkmode-toggle {
+    margin-left : 4px;
+    margin-right : 4px;
+}
+
+.light .darkmode-toggle i {
+    color : #FA58AC;
+}
+
+/* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #FA58AC;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #FA58AC;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/* about */
+.photo_moi {
+    border-radius: 1000px;
+    filter: grayscale(0%);
+    transition: filter 1.5s ease-in-out;
+    margin: 20px;
+    width: 259px;
+    height: 360px;
+}
+
+.photo_moi:hover {
+    filter: grayscale(100%);
+}
+
+/* skills */
+.skillsText.card {
+    height: 350px;
+    cursor: pointer;
+}
+.skillsText img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+#skills p {
+    text-align: center;
+}
+.skillsIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+.card:hover .skillsIcon {
+    color: #008000;
+}
+.skillsText:hover {
+    border: 1px solid #008000;
+}
+
+/* portfolio */
+#portfolio p {
+    text-align: center;
+}
+
+/* contact */
+.contactColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contactColumn i {
+    color: #198754;
+}
+
+/* footer */
