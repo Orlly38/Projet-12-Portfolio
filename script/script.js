@@ -105,6 +105,46 @@ handleNavbarCollapse();
 createSkillsFromJSON();
 createPortfolioFromJSON();
 
+function filtersButton() {
+    const filters = document.querySelectorAll(".button-filter");
+    filters.forEach((filter) => {
+        filter.addEventListener("click", (button) => {
+            switch(button.target.id){
+                case 'button_all': 
+                    showDivs('.test');
+                    showDivs('.dev');
+                    break;
+                case 'button_dev': 
+                    hideDivs('.test');
+                    showDivs('.dev');
+                    break;
+                case 'button_test': 
+                    hideDivs('.dev');
+                    showDivs('.test');
+                    break;
+                default:break;
+            }
+            
+            console.log('button : ' +button);
+        });
+    });
+}
+
+function hideDivs(classToHide){
+    var divs = document.querySelectorAll(classToHide);
+    divs.forEach(function(div) {
+        div.style.display = 'none';
+    });
+}
+
+function showDivs(classToShow){
+    var divs = document.querySelectorAll(classToShow);
+    divs.forEach(function(div) {
+        div.style.display = 'flex';
+    });
+}
+
+
 function enableDarkMode(){
     if (document.body.classList.contains('dark')) {
         document.body.classList.remove('dark');
@@ -116,5 +156,5 @@ function enableDarkMode(){
 }
 
 addKasaCarrousel();
-addKasaCarrousel();
-//addNewCarrousel('data/projet_724.json');
+add724EventsCarrousel();
+filtersButton();

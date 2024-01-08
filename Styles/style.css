@@ -19,19 +19,60 @@
 
 
 body.dark {
-    background-color: #1c1c1c;
+    background-color: #111010;
 }
 body.light {
-    background-color: #d8d8d8;
+    background-color: #dcd6dea4;
 }
 
 .dark .navbarScroll {
-    background-color: #989898;
+    background-color: #2c2b2b;
+    
 }
 
 .light .navbarScroll {
-    background-color: #dcdcdc;
+    background-color: #c6c2c8;
 }
+
+/* POLICES */
+
+@font-face {
+    font-family: 'Pacifico' ;
+    src: url('./Polices/Pacifico.ttf') ;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('./Polices/Quicksand_Book.otf');
+}
+
+@font-face {
+    font-family: 'Bellarina';
+    src: url('./Polices/Bellarina.otf');
+}
+
+.navbar .container {
+    margin-left: 15px;
+    max-width: 100%;
+}
+
+.nav-link i{
+    padding-right: 5px;
+}
+
+.light .navbar-nav a.nav-link {
+    color:#FA58AC;
+    font-size: 20px;
+    font-family: 'Quicksand';
+}
+
+.dark .navbar-nav a.nav-link {
+    color:#FA58AC;
+    font-size: 20px;
+    font-family: 'Quicksand';
+}
+
+/* ABOUT ME */
 
 .about {
     margin-top: 70px;
@@ -41,6 +82,8 @@ body.light {
     font-family: "Quicksand";
     color: #088A85;
     font-size: 18px;
+    margin-left: 30px;
+    margin-right: 80px;
 }
 
 .about_me {
@@ -76,29 +119,145 @@ body.light {
     justify-content: flex-end;    
 }
 
-@font-face {
-    font-family: 'Pacifico' ;
-    src: url('Pacifico.ttf') ;
+.button {
+    display: flex;
+    justify-content: center;
 }
 
-@font-face {
-    font-family: 'Quicksand';
-    src: url('Quicksand_Book.otf');
+#button_cv {
+    border-radius: 25px;
+    padding: 15px;
+    font-family: "Quicksand";
+    font-size: 20px;
+    font-weight: 1000;
+    overflow: hidden;
+    border: 2px solid #FA58AC;
 }
 
-@font-face {
-    font-family: 'Bellarina';
-    src: url('./Polices/Bellarina.otf');
+/* BOUTON CV CLAIR*/
+
+.light #button_cv {
+    background-color: #dcd6dea4;
+    position: relative;
+    overflow: hidden;
+    color: #088A85;
+    transition: color 1.5s ease;
 }
 
-.navbar .container {
-    margin-left: 15px;
-    max-width: 100%;
+.light #button_cv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #f5c3dda8;
+    transition: left 1.5s ease;
+}
+  
+.light #button_cv:hover {
+    color: #000000;
 }
 
-.light .navbar-nav a.nav-link {
-    color:#1c1c1c;
+.light #button_cv:hover::before {
+    left: 0;
 }
+
+/* BOUTON CV SOMBRE */
+
+.dark #button_cv {
+    background-color: #111010;
+    position: relative;
+    overflow: hidden;
+    color: #088A85;
+    transition: color 1.5s ease;
+}
+
+.dark #button_cv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #f5c3dda8;
+    transition: left 1.5s ease;
+}
+  
+.dark #button_cv:hover {
+    color: #7cf5f1;
+}
+
+.dark #button_cv:hover::before {
+    left: 0;
+}
+
+/* CARROUSEL */
+.carrousel {
+    padding-bottom: 90px;
+}
+
+.carrousel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 470px;
+	position: relative;
+}
+.carrousel .img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	object-fit: cover;
+	object-position: center;
+}
+
+.carrousel p {
+	position: absolute;
+	width: 50%;
+	height: 50%;
+
+}
+
+.carrousel .arrow {
+    position: absolute;
+    font-size:250px;
+    cursor:pointer;
+}
+
+.carrousel .arrow:hover{
+    text-shadow: 0 0 5px #088A85; 
+}
+
+.carrousel .arrow_left {
+	left: 10px;
+}
+.carrousel .arrow_right {
+	right: 10px;
+}
+
+.dots {
+	position: absolute;
+	bottom: 40px;
+	display: flex;
+}
+.dot {
+	margin-inline: 5px;
+	width: 13px;
+	height: 13px;
+	background-color: #ffffff00;
+	border: 3px solid #fff;
+	border-radius: 100%;
+    list-style-type: none;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+}
+.dot_selected {
+	background-color: #fff;
+}
+
 /* menu */
 .darkmode-toggle {
     margin-left : 4px;
@@ -107,6 +266,10 @@ body.light {
 
 .light .darkmode-toggle i {
     color : #FA58AC;
+}
+
+.dark .darkmode-toggle i {
+    color : #7f797c;
 }
 
 /* The switch - the box around the slider */
@@ -132,7 +295,7 @@ body.light {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #979393;
     -webkit-transition: .4s;
     transition: .4s;
   }
