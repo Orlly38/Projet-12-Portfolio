@@ -7,54 +7,57 @@ function findActiveIndex() {
   }
 
 
-function addKasaCarrousel(){
+function add724EventsCarrousel(){
 
     const slides = [
         {
-         
-            "image":"kasa.png",
-            "text": "Voici le site de Kasa"
+            "image":"724events.png",
+            "text":""
         },
         {
             "title":"Objectif",
-            "image":"kasa_txt.png",
-            "text": "Voici le site de Kasa"
+            "image":"724events-text.png",
+            "text": "Voici le site de 724a"
         },
         {
             "title":"Compétences",
-            "image":"kasa_txt.png",
+            "image":"724events-text.png",
             "text": "blababla bblabal"
         }
     ];
     let container = document.querySelector("#portfolio .container");
     let carrouselDiv = document.createElement("div");            
-    carrouselDiv.innerHTML += '	<img class="img-kasa" src="./images/'+slides[0].image+'" alt="Image de Kasa" />';
-    carrouselDiv.innerHTML += '	<p class="text-kasa" > '+slides[0].text+'</p>';
+    carrouselDiv.innerHTML += '	<img class="img-724" src="./images/'+slides[0].image+'" alt="Image de Kasa" />';
+    carrouselDiv.innerHTML += '	<p class="text-724" > '+slides[0].text+'</p>';
     carrouselDiv.innerHTML += '<span class="arrow_left arrow">&lt;</span>';
     carrouselDiv.innerHTML += '<span class="arrow_right arrow">&gt;</span>';
     carrouselDiv.innerHTML += getDotsHtml();
-    carrouselDiv.classList.add("carrousel-kasa");
+    carrouselDiv.classList.add("carrousel-724");
     carrouselDiv.classList.add("carrousel");
-    carrouselDiv.classList.add("dev");
+    carrouselDiv.classList.add("test");
     container.appendChild(carrouselDiv);
 
-     arrowRight = document.querySelector (".carrousel-kasa .arrow_right");
-     arrowLeft = document.querySelector (".carrousel-kasa .arrow_left");
+     arrowRight = document.querySelector (".carrousel-724 .arrow_right");
+     arrowLeft = document.querySelector (".carrousel-724 .arrow_left");
     
     arrowRight.addEventListener("click",function () {	
 		let activeIndex=findActiveIndex();
-// Boucle pour slider à l'infini		
+
+        // Boucle pour slider à l'infini		
 		if (activeIndex===2){
 			getDots()[0] .classList.add ("dot_selected");
 			getDots()[2] .classList.remove ("dot_selected");
-			document.querySelector (".img-kasa").src='./images/'+slides[0].image;
-            document.querySelector (".text-kasa").innerHTML=slides[0].text;
+
+
+
+			document.querySelector (".img-724").src='./images/'+slides[0].image;
+            document.querySelector (".text-724").innerHTML=slides[0].text;
 		}
 // Comportement normal du slider
 		else { getDots()[activeIndex+1] .classList.add ("dot_selected");	
 			getDots()[activeIndex] .classList.remove ("dot_selected");	
-			document.querySelector (".img-kasa").src='./images/'+slides[activeIndex+1].image;
-            document.querySelector (".text-kasa").innerHTML=slides[activeIndex+1].text;
+			document.querySelector (".img-724").src='./images/'+slides[activeIndex+1].image;
+            document.querySelector (".text-724").innerHTML=slides[activeIndex+1].text;
 		}
 	});
 
@@ -65,14 +68,14 @@ function addKasaCarrousel(){
 		if (activeIndex===0){
 			getDots()[2] .classList.add ("dot_selected");
 			getDots()[0] .classList.remove ("dot_selected");
-			document.querySelector (".img-kasa").src='./images/'+slides[2].image;
-            document.querySelector (".text-kasa").innerHTML=slides[2].text;
+			document.querySelector (".img-724").src='./images/'+slides[2].image;
+            document.querySelector (".text-724").innerHTML=slides[2].text;
 		}
         // Comportement normal du slider
 		else { getDots()[activeIndex-1] .classList.add ("dot_selected");
 		getDots()[activeIndex] .classList.remove ("dot_selected");	
-		document.querySelector (".img-kasa").src='./images/'+slides[activeIndex-1].image;
-        document.querySelector (".text-kasa").innerHTML=slides[activeIndex-1].text;
+		document.querySelector (".img-724").src='./images/'+slides[activeIndex-1].image;
+        document.querySelector (".text-724").innerHTML=slides[activeIndex-1].text;
 
 	}
 });
@@ -82,8 +85,8 @@ for (let i = 0; i < getDots().length; i++) {
 	getDots()[i].addEventListener("click",function (informationClick) {	
 	getDots()[findActiveIndex()] .classList.remove ("dot_selected");
 	document.getElementById(informationClick.target.id) .classList.add ("dot_selected");
-	document.querySelector (".img-kasa").src='./images/'+slides[findActiveIndex()].image;
-    document.querySelector (".text-kasa").innerHTML=slides[findActiveIndex()].text;
+	document.querySelector (".img-724").src='./images/'+slides[findActiveIndex()].image;
+    document.querySelector (".text-724").innerHTML=slides[findActiveIndex()].text;
 
 	});
 }

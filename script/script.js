@@ -155,6 +155,7 @@ function enableDarkMode(){
     }
 }
 
+addBookiCarrousel();
 addKasaCarrousel();
 add724EventsCarrousel();
 filtersButton();

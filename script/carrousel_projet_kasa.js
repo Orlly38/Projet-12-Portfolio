@@ -7,18 +7,17 @@ function findActiveIndex() {
   }
 
 
-function add724EventsCarrousel(){
+function addKasaCarrousel(){
 
     const slides = [
         {
-         
             "image":"kasa.png",
-            "text": "Voici le site de 724"
+            "text":""
         },
         {
             "title":"Objectif",
             "image":"kasa_txt.png",
-            "text": "Voici le site de 724a"
+            "text": "Ce site a été entièrement reconstruit avec Create React App, incluant React Router. Il comporte un système de carrousel et des éléments collapses qui peuvent être ouverts et fermés, améliorant ainsi la navigation."
         },
         {
             "title":"Compétences",
@@ -28,18 +27,18 @@ function add724EventsCarrousel(){
     ];
     let container = document.querySelector("#portfolio .container");
     let carrouselDiv = document.createElement("div");            
-    carrouselDiv.innerHTML += '	<img class="img-724" src="./images/'+slides[0].image+'" alt="Image de Kasa" />';
-    carrouselDiv.innerHTML += '	<p class="text-724" > '+slides[0].text+'</p>';
+    carrouselDiv.innerHTML += '	<img class="img-kasa" src="./images/'+slides[0].image+'" alt="Image de Kasa" />';
+    carrouselDiv.innerHTML += '	<p class="text-kasa" > '+slides[0].text+'</p>';
     carrouselDiv.innerHTML += '<span class="arrow_left arrow">&lt;</span>';
     carrouselDiv.innerHTML += '<span class="arrow_right arrow">&gt;</span>';
     carrouselDiv.innerHTML += getDotsHtml();
-    carrouselDiv.classList.add("carrousel-724");
+    carrouselDiv.classList.add("carrousel-kasa");
     carrouselDiv.classList.add("carrousel");
-    carrouselDiv.classList.add("test");
+    carrouselDiv.classList.add("dev");
     container.appendChild(carrouselDiv);
 
-     arrowRight = document.querySelector (".carrousel-724 .arrow_right");
-     arrowLeft = document.querySelector (".carrousel-724 .arrow_left");
+     arrowRight = document.querySelector (".carrousel-kasa .arrow_right");
+     arrowLeft = document.querySelector (".carrousel-kasa .arrow_left");
     
     arrowRight.addEventListener("click",function () {	
 		let activeIndex=findActiveIndex();
@@ -47,9 +46,6 @@ function add724EventsCarrousel(){
 		if (activeIndex===2){
 			getDots()[0] .classList.add ("dot_selected");
 			getDots()[2] .classList.remove ("dot_selected");
-
-            //TODO : remplacer .img-kasa par .img-724  et .text-kasa par .text-724
-
 			document.querySelector (".img-kasa").src='./images/'+slides[0].image;
             document.querySelector (".text-kasa").innerHTML=slides[0].text;
 		}
