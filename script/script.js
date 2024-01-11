@@ -155,7 +155,10 @@ function enableDarkMode(){
     }
 }
 
-addBookiCarrousel();
-addKasaCarrousel();
-add724EventsCarrousel();
+addProjetBooki();
+addProjet724();
+addProjetBluel();
+addProjetKasa();
+addProjetEco();
+addProjetTomsen();
 filtersButton();

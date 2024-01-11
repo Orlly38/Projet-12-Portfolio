@@ -1,103 +1,20 @@
-function findActiveIndex() {
-	for (let i = 0; i < getDots().length; i++) {
-	  if (getDots()[i].classList.contains("dot_selected")) {
-		return i;
-	  }
-	}
-  }
-
-
-function addKasaCarrousel(){
-
-    const slides = [
+function addProjetKasa(){
+    const slidesProjetKasa = [
         {
-            "image":"kasa.png",
+            "image":"Kasa.jpg",
             "text":""
         },
         {
             "title":"Objectif",
-            "image":"kasa_txt.png",
-            "text": "Ce site a été entièrement reconstruit avec Create React App, incluant React Router. Il comporte un système de carrousel et des éléments collapses qui peuvent être ouverts et fermés, améliorant ainsi la navigation."
+            "image":"Kasa_txt.jpg",
+            "text": "Site de location immobilière : </br></br>Pour ce projet, j'ai reconstruit le site avec Create React App. J'ai rajouté des collapses mais aussi un carrousel pour plus de dynamisme et confort pour l'utilisateur."
         },
         {
             "title":"Compétences",
-            "image":"kasa_txt.png",
-            "text": "blababla bblabal"
+            "image":"Kasa_txt.jpg",
+            "text": "Compétences acquises : </br></br>-> HTML </br>-> CSS </br>-> JavaScript </br>-> React </br>-> GitHub"
         }
     ];
-    let container = document.querySelector("#portfolio .container");
-    let carrouselDiv = document.createElement("div");            
-    carrouselDiv.innerHTML += '	<img class="img-kasa" src="./images/'+slides[0].image+'" alt="Image de Kasa" />';
-    carrouselDiv.innerHTML += '	<p class="text-kasa" > '+slides[0].text+'</p>';
-    carrouselDiv.innerHTML += '<span class="arrow_left arrow">&lt;</span>';
-    carrouselDiv.innerHTML += '<span class="arrow_right arrow">&gt;</span>';
-    carrouselDiv.innerHTML += getDotsHtml();
-    carrouselDiv.classList.add("carrousel-kasa");
-    carrouselDiv.classList.add("carrousel");
-    carrouselDiv.classList.add("dev");
-    container.appendChild(carrouselDiv);
-
-     arrowRight = document.querySelector (".carrousel-kasa .arrow_right");
-     arrowLeft = document.querySelector (".carrousel-kasa .arrow_left");
     
-    arrowRight.addEventListener("click",function () {	
-		let activeIndex=findActiveIndex();
-// Boucle pour slider à l'infini		
-		if (activeIndex===2){
-			getDots()[0] .classList.add ("dot_selected");
-			getDots()[2] .classList.remove ("dot_selected");
-			document.querySelector (".img-kasa").src='./images/'+slides[0].image;
-            document.querySelector (".text-kasa").innerHTML=slides[0].text;
-		}
-// Comportement normal du slider
-		else { getDots()[activeIndex+1] .classList.add ("dot_selected");	
-			getDots()[activeIndex] .classList.remove ("dot_selected");	
-			document.querySelector (".img-kasa").src='./images/'+slides[activeIndex+1].image;
-            document.querySelector (".text-kasa").innerHTML=slides[activeIndex+1].text;
-		}
-	});
-
-// FLECHE GAUCHE
-	arrowLeft.addEventListener("click",function () {
-		let activeIndex=findActiveIndex();
-        // Boucle pour slider à l'infini
-		if (activeIndex===0){
-			getDots()[2] .classList.add ("dot_selected");
-			getDots()[0] .classList.remove ("dot_selected");
-			document.querySelector (".img-kasa").src='./images/'+slides[2].image;
-            document.querySelector (".text-kasa").innerHTML=slides[2].text;
-		}
-        // Comportement normal du slider
-		else { getDots()[activeIndex-1] .classList.add ("dot_selected");
-		getDots()[activeIndex] .classList.remove ("dot_selected");	
-		document.querySelector (".img-kasa").src='./images/'+slides[activeIndex-1].image;
-        document.querySelector (".text-kasa").innerHTML=slides[activeIndex-1].text;
-
-	}
-});
-
-// BULLETS POINTS
-for (let i = 0; i < getDots().length; i++) {
-	getDots()[i].addEventListener("click",function (informationClick) {	
-	getDots()[findActiveIndex()] .classList.remove ("dot_selected");
-	document.getElementById(informationClick.target.id) .classList.add ("dot_selected");
-	document.querySelector (".img-kasa").src='./images/'+slides[findActiveIndex()].image;
-    document.querySelector (".text-kasa").innerHTML=slides[findActiveIndex()].text;
-
-	});
-}
-
-}
-
-function getDots(){
-    return document.querySelectorAll(".dot");
-}
-
-function getDotsHtml(){
-    var dotsHtml = '<ul class="dots"> ';
-    dotsHtml += '<li id="dot1" class="dot dot_selected" type="bullet"></li>';
-    dotsHtml += '<li id="dot2" class="dot" type="bullet"></li>';
-    dotsHtml += '<li id="dot3" class="dot" type="bullet"></li>';
-    dotsHtml += '</ul>';
-    return dotsHtml;    
+    addGenericCarrousel(slidesProjetKasa, 'Kasa', 'Kasa', "https://github.com/Orlly38/Projet-8-Kasa", "dev");
 }

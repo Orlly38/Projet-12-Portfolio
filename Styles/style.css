@@ -288,6 +288,19 @@ body.light {
 
 /***** MES PROJETS *****/
 
+#portfolio h1 {
+    color :#088A85;
+    font-family: "Pacifico";
+}
+
+a.github-link {
+    color :#088A85;
+}
+
+a.github-link:hover {
+    color :#FA58AC;
+}
+
 .text-center {
     font-family: "Pacifico";
     font-size: 50px;
@@ -350,23 +363,23 @@ body.light {
 	object-position: center;
 }
 
-.img-kasa, .img-724, .img-booki {
+.carrousel img {
     width: 600px;
     height: 350px;
     border-radius: 25px;
 }
 
-.text-kasa, .text-724, .text-booki {
-    font-family: "Quicksand";
-    color: white;
-    padding: 50px;
+.text-Kasa, .text-724, .text-Booki {
+    
 }
 
 .carrousel p {
 	position: absolute;
 	width: 50%;
 	height: 50%;
-
+    font-family: "Quicksand";
+    color: white;
+    padding: 50px;
 }
 
 .carrousel .arrow {
@@ -390,7 +403,7 @@ body.light {
 
 .dots {
 	position: absolute;
-	bottom: 55px;
+	bottom: 45px;
 	display: flex;
 }
 .dot {
