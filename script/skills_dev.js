@@ -1,14 +1,23 @@
 function addSkillsDev(){
     const skillsData = [
         {
-            "image":"js.jpg"
+            "image":"html.png"
+        },
+        {
+            "image":"css.png"
         },
         {
             "image":"js.jpg"
         },
         {
-            "image":"js.jpg"
-        }
+            "image":"vscode.jpg"
+        },
+        {
+            "image":"github.png"
+        },
+        {
+            "image":"gitbash.jpg"
+        },
     ];
     addSkills(skillsData,'Développement');
 }

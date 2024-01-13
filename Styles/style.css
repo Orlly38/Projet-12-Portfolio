@@ -425,6 +425,14 @@ a.github-link:hover {
 }
 
 /***** COMPETENCES *****/
+#skills h3 {
+    color :#088A85;
+    font-family: "Pacifico";
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
 #skills .all-skills {
     display: flex;
     justify-content: space-around;
@@ -436,6 +444,9 @@ a.github-link:hover {
     grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
     grid-template-rows: repeat(2, 1fr);    /* 2 lignes égales */
     gap: 20px;
+    border: 1px solid #088A85;
+    border-radius: 15%;
+    padding: 30px;
 }
 
 .skill-img img {
@@ -445,6 +456,7 @@ a.github-link:hover {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     filter: grayscale(100%);
+    border-radius: 10px;
 }
 
 .skill-img img:hover{

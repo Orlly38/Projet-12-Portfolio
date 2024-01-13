@@ -1,13 +1,13 @@
 function addSkillsOrga(){
     const skillsData = [
         {
-            "image":"js.jpg"
+            "image":"agile.png"
         },
         {
-            "image":"js.jpg"
+            "image":"jira.png"
         },
         {
-            "image":"js.jpg"
+            "image":"wakelet.png"
         }
     ];
     addSkills(skillsData, 'Organisation');

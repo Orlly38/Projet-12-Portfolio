@@ -1,10 +1,10 @@
 function addSkillsTest(){
     const skillsData = [
         {
-            "image":"js.jpg"
+            "image":"cypress.jpeg"
         },
         {
-            "image":"js.jpg"
+            "image":"cdr.png"
         },
         {
             "image":"js.jpg"
