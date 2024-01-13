@@ -7,12 +7,12 @@ function addProjetTomsen(){
         {
             "title":"Objectif",
             "image":"Tomsen_txt.jpg",
-            "text": "A partir de la maquette Figma, j'ai conçu ce site en utilisant Flexbox, ce qui nous permets d'avoir une mise en page flexible. J'ai également géré la partie responsive pour le confort de l'utilisateur. En ce qui concerne la qualité, ce site est validé par W3C."
+            "text": "Site de gestion financière pour particulier :</br></br>Après avoir analysé la maquette et les spécifications fonctionnelles, j'ai dû concevoir toute une stratégie de tests avec différents scénarios, une revue d'exigences et un cahier de recette."
         },
         {
             "title":"Compétences",
             "image":"Tomsen_txt.jpg",
-            "text": "Compétences acquises : </br></br>-> Stratégie de test </br>-> Rédaction d'un cahier de recette </br>-> Rédaction d'une revue d'exigences </br>-> Création de scénarios de test"
+            "text": "Compétences acquises : </br></br>-> Rédaction d'une stratégie de test </br>-> Rédaction d'un cahier de recette </br>-> Rédaction d'une revue d'exigences </br>-> Création de scénarios de test"
         }
     ];
     

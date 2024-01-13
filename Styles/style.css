@@ -314,7 +314,7 @@ a.github-link:hover {
     font-size: 20px;
 }
 
-#button_all, #button_dev, #button_test {
+.button-filter button {
     border-radius: 25px;
     border: 2px solid #088A85;
     padding: 5px;
@@ -323,21 +323,20 @@ a.github-link:hover {
     color: #088A85;
 }
 
-.light #button_all, .light #button_dev, .light #button_test {
+.light .button-filter button {
     background-color: #dcd6dea4;
 }
 
-.light #button_all:hover, .light #button_dev:hover, .light #button_test:hover {
-    background-color: #f5c3dda8;
+.button-filter button:hover {
+    border: 4px solid #088A85;
 }
 
-.dark #button_all, .dark #button_dev, .dark #button_test {
+.dark .button-filter button {
     background-color: #111010;
 }
 
-.dark #button_all:hover, .dark #button_dev:hover, .dark #button_test:hover {
-    background-color: #f5c3dda8;
-    color: white;
+.button-filter button.selected {
+    border: 4px solid #088A85;
 }
 
 /***** CARROUSEL *****/
@@ -367,10 +366,6 @@ a.github-link:hover {
     width: 600px;
     height: 350px;
     border-radius: 25px;
-}
-
-.text-Kasa, .text-724, .text-Booki {
-    
 }
 
 .carrousel p {
@@ -418,6 +413,14 @@ a.github-link:hover {
 }
 .dot_selected {
 	background-color: #fff;
+}
+
+.light .dot {
+    background-color: #f7c1dd;
+}
+
+.light .dot_selected {
+    background-color: #088A85;
 }
 
 

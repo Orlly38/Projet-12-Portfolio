@@ -7,12 +7,12 @@ function addProjetEco(){
         {
             "title":"Objectif",
             "image":"Ecoblissbath_txt.jpg",
-            "text": "A partir de la maquette Figma, j'ai conçu ce site en utilisant Flexbox, ce qui nous permets d'avoir une mise en page flexible. J'ai également géré la partie responsive pour le confort de l'utilisateur. En ce qui concerne la qualité, ce site est validé par W3C."
+            "text": "Site de vente en ligne de produits de beauté écoresposables :</br></br> Un premier bilan de campagne a été effectué à l'aide de tests exploratoires. En suivant les recommandations, j'ai privilégié certains scénarios à automatiser avec Cypress. "
         },
         {
             "title":"Compétences",
             "image":"Ecoblissbath_txt.jpg",
-            "text": "Compétences acquises : </br></br>-> Figma </br>-> HTML </br>-> CSS </br>-> Flexbox </br>-> Responsive design </br>-> W3C"
+            "text": "Compétences acquises : </br></br>-> Cypress </br>-> Automatisation de tests </br>-> Rédaction d'un bilan de campagne </br>-> GitHub"
         }
     ];
     

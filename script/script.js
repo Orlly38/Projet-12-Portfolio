@@ -59,74 +59,42 @@ function createSkillsFromJSON() {
             });
         });
 }
-// Function to dynamically create HTML elements from the JSON file
-function createPortfolioFromJSON() {
-    const container = document.querySelector("#portfolio .container");
-    let row = document.createElement("div");
-    row.classList.add("row");
-
-    // Load the JSON file
-    fetch("data/portfolio.json")
-        .then((response) => response.json())
-        .then((data) => {
-            // Iterate through the JSON data and create HTML elements
-            data.forEach((item, index) => {
-                const card = document.createElement("div");
-                card.classList.add("col-lg-4", "mt-4");
-                card.innerHTML = `
-                    <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/${item.image}" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">${item.title}</h4>
-                        <p class="card-text">${item.text}</p>
-                        <div class="text-center">
-                            <a href="${item.link}" class="btn btn-success">Lien</a>
-                        </div>
-                    </div>
-                </div>
-                `;
-
-                // Append the card to the current row
-                row.apendChild(card);
-
-                // If the index is a multiple of 3 or it's the last element, create a new row
-                if ((index + 1) % 3 === 0 || index === data.length - 1) {
-                    container.appendChild(row);
-                    row = document.createElement("div");
-                    row.classList.add("row");
-                }
-            });
-        });
-}
 
 // Call the functions to execute the code
 handleNavbarScroll();
 handleNavbarCollapse();
 createSkillsFromJSON();
-createPortfolioFromJSON();
 
 function filtersButton() {
-    const filters = document.querySelectorAll(".button-filter");
-    filters.forEach((filter) => {
+    const filters = document.querySelectorAll(".button-filter button");
+    filters.forEach((filter) => {                       
+
         filter.addEventListener("click", (button) => {
-            switch(button.target.id){
-                case 'button_all': 
-                    showDivs('.test');
-                    showDivs('.dev');
-                    break;
-                case 'button_dev': 
-                    hideDivs('.test');
-                    showDivs('.dev');
-                    break;
-                case 'button_test': 
-                    hideDivs('.dev');
-                    showDivs('.test');
-                    break;
-                default:break;
-            }
-            
-            console.log('button : ' +button);
-        });
+
+            // Supprimez la classe "selected" de tous les boutons
+            filters.forEach((f) => f.classList.remove("selected"));
+
+            // Ajoutez la classe "selected" au bouton actuellement cliqué
+            button.target.classList.add("selected");
+
+
+                    switch(button.target.id){
+                        case 'button_all': 
+                            showDivs('.test');
+                            showDivs('.dev');
+                            break;
+                        case 'button_dev': 
+                            hideDivs('.test');
+                            showDivs('.dev');
+                            break;
+                        case 'button_test': 
+                            hideDivs('.dev');
+                            showDivs('.test');
+                            break;
+                        default:break;
+                    }
+                    
+                });
     });
 }
 

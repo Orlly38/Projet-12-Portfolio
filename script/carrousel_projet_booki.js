@@ -16,5 +16,5 @@ function addProjetBooki(){
         }
     ];
     
-    addGenericCarrousel(slidesProjetBooki, 'Booki', 'Booki', "http://lien du github", "dev");
+    addGenericCarrousel(slidesProjetBooki, 'Booki', 'Booki', "https://github.com/Orlly38/Projet-3-Booki", "dev");
 }
