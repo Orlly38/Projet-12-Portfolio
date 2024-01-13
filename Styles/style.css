@@ -340,12 +340,13 @@ a.github-link:hover {
 }
 
 /***** CARROUSEL *****/
-.carrousel {
-    padding-bottom: 90px;
+#portfolio p {
+    text-align: center;
 }
 
 .carrousel {
-	display: flex;
+    padding-bottom: 90px;
+    display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -423,39 +424,39 @@ a.github-link:hover {
     background-color: #088A85;
 }
 
-
-/* skills */
-.skillsText.card {
-    height: 350px;
-    cursor: pointer;
+/***** COMPETENCES *****/
+#skills .all-skills {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
 }
-.skillsText img {
-    width: 100%;
+
+.skill-imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+    grid-template-rows: repeat(2, 1fr);    /* 2 lignes égales */
+    gap: 20px;
+}
+
+.skill-img img {
+    width: 150px;
     height: 150px;
-    object-fit: contain;
-}
-#skills p {
-    text-align: center;
-}
-.skillsIcon {
-    font-size: 36px;
-    text-align: center;
-    width: 100%;
-}
-.card-title {
-    text-align: center;
-}
-.card:hover .skillsIcon {
-    color: #008000;
-}
-.skillsText:hover {
-    border: 1px solid #008000;
+    -webkit-filter: grayscale(100) blur(0px);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    filter: grayscale(100%);
 }
 
-/* portfolio */
-#portfolio p {
-    text-align: center;
-}
+.skill-img img:hover{
+    width: 150px; /* on affiche l'image au carré */
+    height: 150px;
+    border-radius: 50%;  /* on arrondit l'image */
+    -webkit-transform: rotate(360deg); /* rotation de l'image */
+    transform: rotate(360deg);
+    filter: grayscale(0%);
+  }
+  
+
 
 /* contact */
 .contactColumn {

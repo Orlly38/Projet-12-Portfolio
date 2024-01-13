@@ -23,95 +23,9 @@ function handleNavbarCollapse() {
     });
 }
 
-// Function to dynamically create HTML elements from the JSON file
-function createSkillsFromJSON() {
-    const container = document.querySelector("#skills .container");
-    let row = document.createElement("div");
-    row.classList.add("row");
-
-    // Load the JSON file
-    fetch("data/skills.json")
-        .then((response) => response.json())
-        .then((data) => {
-            // Iterate through the JSON data and create HTML elements
-            data.forEach((item, index) => {
-                const card = document.createElement("div");
-                card.classList.add("col-lg-4", "mt-4");
-                card.innerHTML = `
-                    <div class="card skillsText">
-                        <div class="card-body">
-                            <img src="./images/${item.image}" />
-                            <h4 class="card-title mt-3">${item.title}</h4>
-                            <p class="card-text mt-3">${item.text}</p>
-                        </div>
-                    </div>
-                `;
-
-                // Append the card to the current row
-                row.appendChild(card);
-
-                // If the index is a multiple of 3 or it's the last element, create a new row
-                if ((index + 1) % 3 === 0 || index === data.length - 1) {
-                    container.appendChild(row);
-                    row = document.createElement("div");
-                    row.classList.add("row");
-                }
-            });
-        });
-}
-
 // Call the functions to execute the code
 handleNavbarScroll();
 handleNavbarCollapse();
-createSkillsFromJSON();
-
-function filtersButton() {
-    const filters = document.querySelectorAll(".button-filter button");
-    filters.forEach((filter) => {                       
-
-        filter.addEventListener("click", (button) => {
-
-            // Supprimez la classe "selected" de tous les boutons
-            filters.forEach((f) => f.classList.remove("selected"));
-
-            // Ajoutez la classe "selected" au bouton actuellement cliqué
-            button.target.classList.add("selected");
-
-
-                    switch(button.target.id){
-                        case 'button_all': 
-                            showDivs('.test');
-                            showDivs('.dev');
-                            break;
-                        case 'button_dev': 
-                            hideDivs('.test');
-                            showDivs('.dev');
-                            break;
-                        case 'button_test': 
-                            hideDivs('.dev');
-                            showDivs('.test');
-                            break;
-                        default:break;
-                    }
-                    
-                });
-    });
-}
-
-function hideDivs(classToHide){
-    var divs = document.querySelectorAll(classToHide);
-    divs.forEach(function(div) {
-        div.style.display = 'none';
-    });
-}
-
-function showDivs(classToShow){
-    var divs = document.querySelectorAll(classToShow);
-    divs.forEach(function(div) {
-        div.style.display = 'flex';
-    });
-}
-
 
 function enableDarkMode(){
     if (document.body.classList.contains('dark')) {
@@ -130,3 +44,6 @@ addProjetKasa();
 addProjetEco();
 addProjetTomsen();
 filtersButton();
+addSkillsTest();
+addSkillsOrga();
+addSkillsDev();
