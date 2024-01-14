@@ -150,7 +150,11 @@ body.light {
     font-family: 'Quicksand';
 }
 
-/***** a propos *****/
+/***** A PROPOS *****/
+
+#about {
+    padding-top: 20px;
+}
 
 .about {
     margin-top: 70px;
