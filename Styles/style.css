@@ -491,7 +491,7 @@ a.github-link:hover {
 
 
 /***** RESPONSIVE *****/
-@media (max-width: 376px) {
+@media (max-width: 431px) {
     #title{
         padding-right: 10px;
         padding-left: 10px;
