@@ -2,23 +2,23 @@ function addSkillsTest(){
     const skillsData = [
         {
             "image":"cypress.jpeg",
-            "text":"text cypress"
+            "text":"Logo Cypress"
         },
         {
             "image":"cdr.png",
-            "text":"text cypress"
+            "text":"Logo cahier de recette"
         },
         {
             "image":"testexplo.png",
-            "text":"text cypress"
+            "text":"Logo tests exploratoires"
         },
         {
             "image":"bilan.png",
-            "text":"text cypress"
+            "text":"Logo bilan de campagne"
         },
         {
             "image":"revueexi.png",
-            "text":"text cypress"
+            "text":"Logo revue exigences"
         },
     ];
     addSkills(skillsData, 'Test');

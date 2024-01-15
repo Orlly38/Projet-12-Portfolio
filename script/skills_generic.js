@@ -10,7 +10,7 @@ function addSkills(skillsData,title){
     skillsData.forEach(skillData => {
         //Pour chaque image du tableau skillsData on crée une div avec l'image dedans et on ajoute
         let skillsDiv = document.createElement("div");   
-        skillsDiv.innerHTML += '<img src="./images/'+skillData.image+'" title="'+skillData.text+'"/>';
+        skillsDiv.innerHTML += '<img src="./images/Logos/'+skillData.image+'" title="'+skillData.text+'"/>';
         skillsDiv.classList.add("skill-img");
         skillImgs.appendChild(skillsDiv);
     });

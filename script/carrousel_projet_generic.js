@@ -26,7 +26,7 @@ function addCarrouselHtml(slides,projectName,title, urlGithub, type){
 		carrouselDiv.innerHTML += ' <h1> '+title+'</h1>';        
 	}
 	//Image et texte
-	carrouselDiv.innerHTML += '	<img class="img-'+projectName+'" src="./images/'+slides[0].image+'" alt="Image de '+projectName+'" />';
+	carrouselDiv.innerHTML += '	<img class="img-'+projectName+'" src="./images/Projets/'+slides[0].image+'" alt="Image de '+projectName+'" />';
     carrouselDiv.innerHTML += '	<p class="text-'+projectName+'" > '+slides[0].text+'</p>';
     carrouselDiv.innerHTML += '<span class="arrow_left arrow">&lt;</span>';
     carrouselDiv.innerHTML += '<span class="arrow_right arrow">&gt;</span>';

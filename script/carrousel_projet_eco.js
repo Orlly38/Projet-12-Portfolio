@@ -16,5 +16,5 @@ function addProjetEco(){
         }
     ];
     
-    addGenericCarrousel(slidesProjetEco, 'EcoBlissBath', 'EcoBlissBath', null, "test");
+    addGenericCarrousel(slidesProjetEco, 'EcoBlissBath', 'EcoBlissBath', "https://github.com/Orlly38/Projet-10-EcoBlissBath", "test");
 }

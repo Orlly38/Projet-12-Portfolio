@@ -477,17 +477,60 @@ a.github-link:hover {
   
 
 
-/* contact */
+/***** CONTACT *****/
+.contactColumn p {
+    font-family: 'Quicksand';
+    font-size: 20px;
+    margin-bottom: 0px;
+    color: #088A85;
+}
+
 .contactColumn {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.contactColumn i {
-    color: #198754;
+
+.contactColumn h4 {
+    color: #088A85;
 }
 
-/* footer */
+@keyframes rotation {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+.contactColumn i {
+    animation: rotation 4s infinite;
+    display: inline-block; 
+    color: #088A85;
+  }
+  
+
+/***** FOOTER *****/
+.light .footer {
+    background-color: #c6c2c8;
+}
+
+.footer p {
+    display: flex;
+    justify-content: center;
+    color:#FA58AC;
+    font-family: 'Quicksand';
+    font-size: 17.5px;
+}
+
+.dark .footer {
+    background-color: #2c2b2b;
+}
+
 
 
 /***** RESPONSIVE *****/
@@ -564,5 +607,6 @@ a.github-link:hover {
     .skill-img img {
         width: 120px;
         height: 120px;
+        filter: grayscale(0%);
     }
 }
