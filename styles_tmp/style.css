@@ -40,17 +40,17 @@ body.light {
 
 @font-face {
     font-family: 'Pacifico' ;
-    src: url('./Polices/Pacifico.ttf') ;
+    src: url('./polices/Pacifico.ttf') ;
 }
 
 @font-face {
     font-family: 'Quicksand';
-    src: url('./Polices/Quicksand_Book.otf');
+    src: url('./polices/Quicksand_Book.otf');
 }
 
 @font-face {
     font-family: 'Bellarina';
-    src: url('./Polices/Bellarina.otf');
+    src: url('./polices/Bellarina.otf');
 }
 
 /***** MENU *****/
