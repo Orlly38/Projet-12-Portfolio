@@ -28,8 +28,8 @@ function addCarrouselHtml(slides,projectName,title, urlGithub, type){
 	//Image et texte
 	carrouselDiv.innerHTML += '	<img class="img-'+projectName+'" src="./images/projets/'+slides[0].image+'" alt="Image de '+projectName+'" />';
     carrouselDiv.innerHTML += '	<p class="text-'+projectName+'" > '+slides[0].text+'</p>';
-    carrouselDiv.innerHTML += '<span class="arrow_left arrow">&lt;</span>';
-    carrouselDiv.innerHTML += '<span class="arrow_right arrow">&gt;</span>';
+    carrouselDiv.innerHTML += '<div class="arrow_left arrow"></div>';
+    carrouselDiv.innerHTML += '<div class="arrow_right arrow"></div>';
     carrouselDiv.innerHTML += getDotsHtml(projectName);
     carrouselDiv.classList.add("carrousel-"+projectName);
     carrouselDiv.classList.add("carrousel");

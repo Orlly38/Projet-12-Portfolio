@@ -19,6 +19,12 @@
 
 html, body {
     width: 100%;
+    cursor: none;
+}
+
+
+body a {
+    cursor: none;
 }
 
 body.dark {
@@ -85,8 +91,8 @@ body.light {
   /* The slider */
   .slider {
     position: absolute;
-    cursor: pointer;
     top: 0;
+    cursor: none;
     left: 0;
     right: 0;
     bottom: 0;
@@ -211,6 +217,7 @@ body.light {
 
 #button_cv {
     border-radius: 25px;
+    cursor: none;
     padding: 15px;
     font-family: "Quicksand";
     font-size: 20px;
@@ -321,6 +328,7 @@ a.github-link:hover {
     font-size: 20px;
 }
 
+
 .button-filter button {
     border-radius: 25px;
     border: 2px solid #088A85;
@@ -332,6 +340,7 @@ a.github-link:hover {
 
 .light .button-filter button {
     background-color: #dcd6dea4;
+    cursor: none;   
 }
 
 .button-filter button:hover {
@@ -340,6 +349,7 @@ a.github-link:hover {
 
 .dark .button-filter button {
     background-color: #111010;
+    cursor: none;   
 }
 
 .button-filter button.selected {
@@ -387,21 +397,37 @@ a.github-link:hover {
 
 .carrousel .arrow {
     position: absolute;
-    font-size: 150px;
-    cursor:pointer;
+    width: 75px;
+    height: 75px;
     font-weight: 100;
     color : #FA58AC;
+    top: 190px; 
 }
 
-.carrousel .arrow:hover{
-    text-shadow: 0 0 20px #088A85; 
+.carrousel .arrow_left{
+    left: 220px;
+    background-image: url('../images/projets/arrow_left.png');
+    background-repeat: no-repeat;
+    background-size: 75px 75px;
+    transition: all 0.5s ease;
 }
 
-.carrousel .arrow_left {
-	left: 200px;
+.carrousel .arrow_right{
+    right: 220px;
+    background-image: url('../images/projets/arrow_right.png');
+    background-repeat: no-repeat;
+    background-size: 75px 75px;
+    transition: all 0.5s ease;
 }
-.carrousel .arrow_right {
-	right: 200px;
+
+.carrousel .arrow_right:hover{
+    background-image: url('../images/projets/arrow_right_hover.png');
+    transition: all 0.5s ease;
+}
+
+.carrousel .arrow_left:hover{
+    background-image: url('../images/projets/arrow_left_hover.png');
+    transition: all 0.5s ease;
 }
 
 .dots {
@@ -485,6 +511,10 @@ a.github-link:hover {
     color: #088A85;
 }
 
+.contactColumn a:hover i {
+    color: #FA58AC;
+}
+
 .contactColumn {
     display: flex;
     flex-direction: column;
@@ -521,10 +551,10 @@ a.github-link:hover {
 }
 
 .footer p { 
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-family: 'Quicksand';
     font-size: 17.5px;
+    margin-bottom: 0px;
 }
 
 .light .footer p {
@@ -537,6 +567,36 @@ a.github-link:hover {
 
 .dark .footer {
     background-color: #2c2b2b;
+}
+
+.cursor-dot,.cursor-dot-outline {
+    z-index: 1050;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    -webkit-transition: opacity .3s ease-in-out,-webkit-transform .3s ease-in-out;
+    transition: opacity .3s ease-in-out,-webkit-transform .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out,transform .3s ease-in-out;
+    transition: opacity .3s ease-in-out,transform .3s ease-in-out;
+    transition: opacity .3s ease-in-out,transform .3s ease-in-out,-webkit-transform .3s ease-in-out
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #FA58AC;
+}
+
+.cursor-dot-outline {
+    width: 30px;
+    height: 30px;
+    background-color:  #fa58ac33;
 }
 
 
@@ -625,3 +685,4 @@ a.github-link:hover {
         filter: grayscale(0%);
     }
 }
+
