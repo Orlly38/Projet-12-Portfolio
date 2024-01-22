@@ -7,7 +7,7 @@ function addProjet724(){
         {
             "title":"Objectif",
             "image":"724_txt.avif",
-            "text": "Site vitrine d'une agence d'évènementielle : </br></br> Pour ce site, j'ai mené une investigation des anomalies afin de permettre leur résolution. Pour cela, j'ai mis à jour le chaier de recette, et j'ai rédigé un bilan de campagne de test."
+            "text": "Site vitrine d'une agence d'évènementielle : </br></br> Pour ce site, j'ai mené une investigation des anomalies afin de permettre leur résolution. Pour cela, j'ai mis à jour le cahier de recette, et j'ai rédigé un bilan de campagne de test."
         },
         {
             "title":"Compétences",
