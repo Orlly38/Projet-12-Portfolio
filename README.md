@@ -2,7 +2,7 @@
 
 Bienvenue sur mon portfolio !
 
-Ceci est le dernier projet de ma formation "testeur logiciel" chez OpenClassRooms. Vous trouverez une partie des projets que j'ai réalisé pendant cette formation. 
+Ceci est le dernier projet de ma formation "testeur logiciel" chez OpenClassRooms. Vous trouverez quelques projets que j'ai réalisé pendant cette formation. 
 
 Une partie avec les projets de tests, une partie avec des projets de développement. 
 
